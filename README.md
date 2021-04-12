@@ -1,12 +1,12 @@
 # Raspberry Internet Watchdog
 
-... but also for any other Linux-based system. Contains a script that monitors whether the Internet connection is working on your device. If not, restart the router. If the problem persists, the device will restart. In this way, you will ensure the stability of access to your network and device in the event of a network failure.
+... but also for any other Linux-based system. Contains a script that monitors whether the Internet connection is working on your device. If not, restarts the router. If the problem persists, the device will restart. In this way, you will ensure the stability of access to your network and device in the event of a network failure.
 
 ## Requirements
 
 - `Linux` based device (like `Raspberry Pi`) with installed `Python 3`
 - One of the supported routers: `Cisco EPC3925`, `Nokia G-240W-C` or other with `OpenWrt` installed
-- The following python packages installed on device: `httplib`, `requests`, `os`, `time`, `re` (only for `Nokia G-240W-C`), `paramiko` (only for `Cisco EPC3925`)
+- The following python packages installed on device: `http.client`, `requests`, `paramiko` (only for `Cisco EPC3925`)
 - Access data to your device: login and password
 - If you are using a router with OpenWrt, make sure it has SSH access and password enabled.
 - The script saves the last restart date to a file in its location to avoid restart loops, so make sure it will have permission to write to that location
@@ -16,7 +16,7 @@
 Install required Python packages:
 
 ```bash
-pip3 install httplib requests os time re paramiko
+pip3 install http.client requests paramiko
 ```
 
 Clone the repository to any directory on your device, e.g. to the home directory.
