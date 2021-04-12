@@ -126,7 +126,7 @@ crontab -e
 And call script. The following command will run the script every 15 minutes.
 
 ```bash
-*/15 * * * * python3 /home/pi/apps/Raspberry-Internet-Watchdog/watchdog.internet.py
+*/15 * * * * python3 /home/pi/Raspberry-Internet-Watchdog/watchdog.internet.py
 ```
 
 
